@@ -1,113 +1,98 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Group - G0 - Innovación y Elegancia</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Golden Group | G0</title>
     <style>
-        /* Un pequeño toque futurista: una sutil cuadrícula de fondo */
         body {
             background-color: #000000;
-            background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
-            background-size: 50px 50px;
+            color: #ffffff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #333;
+            padding: 40px;
+            background: linear-gradient(145deg, #0a0a0a, #000000);
+            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
+            max-width: 800px;
+        }
+        .logo-box {
+            border: 2px solid #D4AF37;
+            padding: 10px 40px;
+            font-size: 50px;
+            font-weight: bold;
+            color: #D4AF37;
+            display: inline-block;
+            margin-bottom: 25px;
+            letter-spacing: 12px;
+        }
+        h1 {
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            color: #D4AF37;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 0.85rem;
+            color: #ffffff;
+            letter-spacing: 5px;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+        .content {
+            color: #e0e0e0;
+            line-height: 1.9;
+            font-size: 1.15rem;
+            text-align: justify;
+        }
+        .highlight {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+        .vision-box {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(212, 175, 55, 0.05);
+            border-left: 3px solid #D4AF37;
+            font-style: italic;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            color: #333;
+            letter-spacing: 3px;
         }
     </style>
 </head>
-<body class="text-gray-200 font-sans">
-
-    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
-        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex flex-col items-center">
-                <div class="text-5xl font-extrabold tracking-tighter">
-                    <span class="text-yellow-500">G</span><span class="text-yellow-600">0</span>
-                </div>
-                <div class="text-xs uppercase tracking-widest text-gray-400 mt-1">Golden Group</div>
-            </div>
-
-            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wide">
-                <a href="#inicio" class="hover:text-yellow-500 transition duration-300">Inicio</a>
-                <a href="#servicios" class="hover:text-yellow-500 transition duration-300">Servicios</a>
-                <a href="#nosotros" class="hover:text-yellow-500 transition duration-300">Nosotros</a>
-                <a href="#contacto" class="border border-yellow-500 text-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition duration-300">Contacto</a>
-            </div>
-
-            <div class="md:hidden text-gray-400">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
-            </div>
-        </nav>
-    </header>
-
-    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
-        <div class="absolute inset-0 opacity-20">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-600 rounded-full blur-[120px]"></div>
-        </div>
-
-        <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none mb-6">
-                El Futuro es <br> <span class="text-yellow-500">Dorado</span> y <span class="text-yellow-600">Digital</span>.
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
-                En Golden Group (G0), fusionamos la elegancia atemporal con la tecnología de vanguardia para crear soluciones únicas.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#servicios" class="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Explorar Soluciones</a>
-                <a href="#nosotros" class="bg-gray-800 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-700 transition duration-300">Conocer G0</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicios" class="py-24 bg-zinc-950 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-yellow-500 uppercase tracking-widest text-sm mb-3">Nuestras Especialidades</p>
-            <h2 class="text-5xl font-bold tracking-tight mb-16">Lo Que Hacemos en G0</h2>
+<body>
+    <div class="container">
+        <div class="logo-box">G0</div>
+        <h1>GOLDEN GROUP</h1>
+        <div class="tagline">The New Economic Projection</div>
+        
+        <div class="content">
+            <p>G0 redefine la arquitectura financiera mediante la <span class="highlight">Tokenización de Activos del Mundo Real (RWA)</span>. Nuestra plataforma no es un activo especulativo, sino un <span class="highlight">Token de Utilidad</span> diseñado para la eficiencia operativa.</p>
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
-                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Innovación Digital</h3>
-                    <p class="text-gray-400">Desarrollamos plataformas que redefinen estándares, combinando estética premium con funcionalidad avanzada.</p>
-                </div>
-                
-                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
-                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 2.221c-6.08 0-10.81 4.752-10.81 10.79a14.98 14.98 0 0011.61 14.37M15.59 14.37a4.5 4.5 0 01-4.41-3.97l-2.812.603L2.22 7.38M15.59 14.37l2.812-2.812M15.59 14.37L19.51 16m-6.3-13.62L15.63 7.63m-5.63 2.62l-2.62 1.63M12 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Estrategia Premium</h3>
-                    <p class="text-gray-400">Posicionamos su marca en el segmento de lujo digital, asegurando una presencia impactante y exclusiva.</p>
-                </div>
-
-                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
-                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-4">Consultoría G0</h3>
-                    <p class="text-gray-400">Asesoría especializada para proyectos que requieren un nivel superior de diseño y tecnología.</p>
-                </div>
-            </div>
+            <p>Impulsamos una transformación radical donde la velocidad es la norma: permitimos el <span class="highlight">movimiento de capitales de 0 a 1000</span> de forma instantánea, eliminando fronteras y democratizando la liquidez global a través de infraestructura inmutable.</p>
         </div>
-    </section>
 
-    <footer class="py-12 bg-black border-t border-gray-800 text-center text-gray-600 text-sm">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-3xl font-bold mb-4">
-                <span class="text-yellow-500">G</span><span class="text-yellow-600">0</span>
-            </div>
-            <p>&copy; 2024 Golden Group. Todos los derechos reservados.</p>
-            <p class="mt-2 text-xs">Elegancia. Futuro. Innovación.</p>
+        <div class="vision-box">
+            "El futuro de la economía no se espera, se programa."
         </div>
-    </footer>
 
+        <div class="footer">GOLDEN GROUP | ECOSISTEMA RWA 2026</div>
+    </div>
 </body>
 </html>
