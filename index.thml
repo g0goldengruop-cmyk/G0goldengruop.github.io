@@ -3,66 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G0 | Golden Group Protocol</title>
+    <title>Golden Group - G0 - Innovación y Elegancia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #050505; color: #ffffff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gold-gradient { background: linear-gradient(90deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .border-gold { border: 1px solid #AA771C; }
-        .bg-dark-card { background-color: #0a0a0a; border: 1px solid #1a1a1a; }
+        /* Un pequeño toque futurista: una sutil cuadrícula de fondo */
+        body {
+            background-color: #000000;
+            background-image: linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
     </style>
 </head>
-<body>
+<body class="text-gray-200 font-sans">
 
-    <nav class="p-6 flex justify-between items-center border-b border-gray-900 sticky top-0 bg-black/80 backdrop-blur-md z-50">
-        <div class="text-xl md:text-2xl font-bold gold-gradient tracking-tighter">G0 GOLDEN GROUP</div>
-        <div class="space-x-8 hidden md:flex text-xs uppercase tracking-[0.2em] font-medium">
-            <a href="#protocolo" class="hover:text-yellow-500 transition">Ecosistema</a>
-            <a href="#vision" class="hover:text-yellow-500 transition">Visión</a>
-            <a href="https://linkedin.com" class="border-gold px-5 py-2 rounded-full text-yellow-500 hover:bg-yellow-600 hover:text-black transition">Acceso CEO</a>
-        </div>
-    </nav>
-
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
-        <div class="mb-4 inline-block px-3 py-1 border border-yellow-900/50 rounded-full text-[10px] uppercase tracking-widest text-yellow-600 bg-yellow-900/10">Protocolo Activo 2026</div>
-        <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter">G0 <span class="gold-gradient italic">PROTOCOL</span></h1>
-        <p class="text-gray-500 max-w-xl text-base md:text-lg leading-relaxed mb-10">Infraestructura de activos digitales diseñada para el holding Golden Group. Gestión de liquidez inteligente y arquitectura blockchain de alto impacto.</p>
-        <div class="flex flex-col md:flex-row gap-4">
-            <a href="#protocolo" class="bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-yellow-500 transition-all duration-300 transform hover:scale-105">Explorar Ecosistema</a>
-            <a href="#vision" class="text-white border border-gray-800 py-4 px-10 rounded-full hover:bg-gray-900 transition">Nuestra Visión</a>
-        </div>
-    </section>
-
-    <section id="protocolo" class="py-32 bg-black px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
-            <div class="p-10 bg-dark-card rounded-2xl hover:border-yellow-900/50 transition">
-                <h3 class="text-lg font-bold mb-4 gold-gradient uppercase tracking-widest">Exclusividad</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Acceso restringido bajo protocolos de invitación. Priorizamos la solidez del capital sobre el volumen masivo.</p>
+    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex flex-col items-center">
+                <div class="text-5xl font-extrabold tracking-tighter">
+                    <span class="text-yellow-500">G</span><span class="text-yellow-600">0</span>
+                </div>
+                <div class="text-xs uppercase tracking-widest text-gray-400 mt-1">Golden Group</div>
             </div>
-            <div class="p-10 bg-dark-card rounded-2xl hover:border-yellow-900/50 transition">
-                <h3 class="text-lg font-bold mb-4 gold-gradient uppercase tracking-widest">G0 Token</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">El núcleo transaccional del holding. Un activo diseñado para la preservación de valor y gobernanza directa.</p>
-            </div>
-            <div class="p-10 bg-dark-card rounded-2xl hover:border-yellow-900/50 transition">
-                <h3 class="text-lg font-bold mb-4 gold-gradient uppercase tracking-widest">Integración</h3>
-                <p class="text-gray-500 text-sm leading-relaxed">Conexión total entre Living Like, Pro Aesthetic y el brazo financiero de Golden Group.</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="vision" class="py-32 text-center px-6 border-t border-gray-900">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl font-bold mb-8">Estatus de Admisión</h2>
-            <p class="text-gray-400 mb-12 text-lg">Actualmente operando en fase de integración privada. No se aceptan nuevas solicitudes de asociación fuera del protocolo de invitación directa.</p>
-            <div class="inline-block border-gold p-1 rounded-full">
-                <div class="bg-yellow-600 text-black px-8 py-3 rounded-full font-bold uppercase text-xs tracking-widest">Cupos de Fase 1 Completados</div>
+            <div class="hidden md:flex items-center space-x-8 text-sm uppercase tracking-wide">
+                <a href="#inicio" class="hover:text-yellow-500 transition duration-300">Inicio</a>
+                <a href="#servicios" class="hover:text-yellow-500 transition duration-300">Servicios</a>
+                <a href="#nosotros" class="hover:text-yellow-500 transition duration-300">Nosotros</a>
+                <a href="#contacto" class="border border-yellow-500 text-yellow-500 px-4 py-2 rounded-full hover:bg-yellow-500 hover:text-black transition duration-300">Contacto</a>
+            </div>
+
+            <div class="md:hidden text-gray-400">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </nav>
+    </header>
+
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-yellow-600 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto px-6 text-center z-10">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter leading-none mb-6">
+                El Futuro es <br> <span class="text-yellow-500">Dorado</span> y <span class="text-yellow-600">Digital</span>.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
+                En Golden Group (G0), fusionamos la elegancia atemporal con la tecnología de vanguardia para crear soluciones únicas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#servicios" class="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 transition duration-300 transform hover:scale-105">Explorar Soluciones</a>
+                <a href="#nosotros" class="bg-gray-800 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-700 transition duration-300">Conocer G0</a>
             </div>
         </div>
     </section>
 
-    <footer class="p-20 text-center text-gray-800 text-[10px] tracking-[0.3em] uppercase">
-        &copy; 2026 Golden Group Holding &bull; Protocolo G0 &bull; Private Access Only
+    <section id="servicios" class="py-24 bg-zinc-950 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <p class="text-yellow-500 uppercase tracking-widest text-sm mb-3">Nuestras Especialidades</p>
+            <h2 class="text-5xl font-bold tracking-tight mb-16">Lo Que Hacemos en G0</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
+                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Innovación Digital</h3>
+                    <p class="text-gray-400">Desarrollamos plataformas que redefinen estándares, combinando estética premium con funcionalidad avanzada.</p>
+                </div>
+                
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
+                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 2.221c-6.08 0-10.81 4.752-10.81 10.79a14.98 14.98 0 0011.61 14.37M15.59 14.37a4.5 4.5 0 01-4.41-3.97l-2.812.603L2.22 7.38M15.59 14.37l2.812-2.812M15.59 14.37L19.51 16m-6.3-13.62L15.63 7.63m-5.63 2.62l-2.62 1.63M12 18.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Estrategia Premium</h3>
+                    <p class="text-gray-400">Posicionamos su marca en el segmento de lujo digital, asegurando una presencia impactante y exclusiva.</p>
+                </div>
+
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 hover:border-yellow-600 transition group">
+                    <div class="text-yellow-500 mb-6 group-hover:scale-110 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-12 h-12">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Consultoría G0</h3>
+                    <p class="text-gray-400">Asesoría especializada para proyectos que requieren un nivel superior de diseño y tecnología.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-black border-t border-gray-800 text-center text-gray-600 text-sm">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-3xl font-bold mb-4">
+                <span class="text-yellow-500">G</span><span class="text-yellow-600">0</span>
+            </div>
+            <p>&copy; 2024 Golden Group. Todos los derechos reservados.</p>
+            <p class="mt-2 text-xs">Elegancia. Futuro. Innovación.</p>
+        </div>
     </footer>
 
 </body>
-</html> 
+</html>
