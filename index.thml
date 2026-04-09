@@ -3,96 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Group | G0</title>
+    <title>G0 | Golden Group Holding</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+
+        :root {
+            --gold: #D4AF37;
+            --black: #0A0A0A;
+            --white: #F5F5F5;
+            --gray: #1A1A1A;
+        }
+
         body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            background-color: var(--black);
+            color: var(--white);
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
             min-height: 100vh;
-            margin: 0;
+            align-items: center;
+        }
+
+        .header-brand {
             text-align: center;
-            padding: 20px;
+            margin-top: 70px;
         }
-        .container {
-            border: 1px solid #333;
-            padding: 40px;
-            background: linear-gradient(145deg, #0a0a0a, #000000);
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.1);
-            max-width: 800px;
+
+        .g-zero-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 110px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: -10px;
+            text-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            line-height: 1;
         }
-        .logo-box { 
-            border: 2px solid #D4AF37;
-            padding: 10px 40px;
-            font-size: 50px;
-            font-weight: bold;
-            color: #D4AF37;
-            display: inline-block;
-            margin-bottom: 25px;
+
+        .brand-name {
+            font-size: 14px;
+            text-transform: uppercase;
             letter-spacing: 12px;
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+            margin-top: 10px;
+            margin-bottom: 60px;
         }
-        h1 {
-            font-size: 1.6rem;
-            letter-spacing: 4px;
-            color: #D4AF37;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-        .tagline {
-            font-size: 0.85rem;
-            color: #ffffff;
-            letter-spacing: 5px;
-            margin-bottom: 35px;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-        .content {
-            color: #e0e0e0;
-            line-height: 1.9;
-            font-size: 1.15rem;
-            text-align: justify;
-        }
-        .highlight {
-            color: #D4AF37;
-            font-weight: 600;
-        }
-        .vision-box {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: rgba(212, 175, 55, 0.05);
-            border-left: 3px solid #D4AF37;
-            font-style: italic;
+
+        main {
+            flex: 1;
             text-align: center;
+            max-width: 800px;
+            padding: 0 20px;
         }
-        .footer {
-            margin-top: 50px;
-            font-size: 0.7rem;
-            color: #333;
-            letter-spacing: 3px;
+
+        h1 {
+            font-size: 44px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: rgba(245, 245, 245, 0.6);
+            margin-bottom: 50px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .interface-terminal {
+            background-color: var(--gray);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+        }
+
+        .btn-operate {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 20px 60px;
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-operate:hover {
+            background: var(--gold);
+            color: var(--black);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+        }
+
+        #status {
+            margin-top: 25px;
+            font-family: monospace;
+            font-size: 12px;
+            color: var(--gold);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contract-footprint {
+            margin-top: 80px;
+            padding: 30px;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            width: 100%;
+        }
+
+        .label {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #666;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .address {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: #888;
+            word-break: break-all;
+        }
+
+        footer {
+            padding: 60px;
+            font-size: 10px;
+            letter-spacing: 8px;
+            color: #444;
+            text-transform: uppercase;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo-box">G0</div>
-        <h1>GOLDEN GROUP</h1>
-        <div class="tagline">The New Economic Projection</div>
-        
-        <div class="content">
-            <p>G0 redefine la arquitectura financiera mediante la <span class="highlight">Tokenización de Activos del Mundo Real (RWA)</span>. Nuestra plataforma no es un activo especulativo, sino un <span class="highlight">Token de Utilidad</span> diseñado para la eficiencia operativa.</p>
-            
-            <p>Impulsamos una transformación radical donde la velocidad es la norma: permitimos el <span class="highlight">movimiento de capitales de 0 a 1000</span> de forma instantánea, eliminando fronteras y democratizando la liquidez global a través de infraestructura inmutable.</p>
+
+    <div class="header-brand">
+        <div class="g-zero-logo">G0</div>
+        <div class="brand-name">Golden Group</div>
+    </div>
+
+    <main>
+        <h1>Soberanía en RWA</h1>
+        <p class="tagline">
+            Interfaz inalienable de liquidación global.<br>
+            Autonomía plena. Ejecución en 120 minutos.
+        </p>
+
+        <div class="interface-terminal">
+            <button class="btn-operate" id="connectBtn">Vincular Protocolo</button>
+            <div id="status">Sistema en Espera</div>
         </div>
 
-        <div class="vision-box">
-            "El futuro de la economía no se espera, se programa."
+        <div class="contract-footprint">
+            <span class="label">Registro Técnico de la Divisa</span>
+            <div class="address">0xB16314946EC56A88c5f51a520B48eA0e124A17a5</div>
         </div>
- 
-        <div class="footer">GOLDEN GROUP | ECOSISTEMA RWA 2026</div>
-    </div>
+    </main>
+
+    <footer>© 2026 Golden Group Holding | Santiago</footer>
+
+    <script>
+        const connectBtn = document.getElementById('connectBtn');
+        const statusText = document.getElementById('status');
+        const contractAddress = "0xB16314946EC56A88c5f51a520B48eA0e124A17a5";
+
+        async function connect() {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const provider = new ethers.providers.Web3Provider(window.ethereum);
+                    await provider.send("eth_requestAccounts", []);
+                    const signer = provider.getSigner();
+                    const userAddress = await signer.getAddress();
+                    
+                    statusText.innerText = "SISTEMA VINCULADO: " + userAddress;
+                    connectBtn.innerText = "OPERATIVO";
+                    connectBtn.style.background = "var(--gold)";
+                    connectBtn.style.color = "var(--black)";
+                    
+                    console.log("Conectado al contrato G0 en Golden Group");
+                } catch (err) {
+                    statusText.innerText = "VINCULACIÓN RECHAZADA";
+                    console.error(err);
+                }
+            } else {
+                alert("Se requiere MetaMask para operar la interfaz G0.");
+            }
+        }
+
+        connectBtn.addEventListener('click', connect);
+    </script>
 </body>
-</html> 
+</html>
